@@ -48,6 +48,10 @@ body,button,input,select,textarea {
 .sn-sitemap .sn-menu:hover #sitemap {
 	display: block;
 }
+
+.sn-mobile:hover .sn-qrcode {
+	display: block;
+}
 #sitemap .sitemap-icon {
 	position: absolute;
 	top: -7px;
@@ -185,6 +189,7 @@ body,button,input,select,textarea {
 #sn-content .sn-quick-menu .menu-cm {
 	padding: 8px 10px;
 	background: #fff;
+	z-index: 2;
 }
 #sn-content .sn-quick-menu .sn-menu {
 	position: relative;
@@ -253,6 +258,7 @@ body,button,input,select,textarea {
 	right: 0;
 	left: auto;
 	display: none;
+	z-index: 2;
 }
 #sitemap .site-hot {
 	width: 275px;
@@ -322,7 +328,147 @@ body,button,input,select,textarea {
 #sitemap .site-brand a:hover,#sitemap .site-help a:hover {
 	text-decoration: underline;
 }
+.sn-mobile {
+	position: relative;
+}
+.sn-mobile .sn-qrcode {
+	position: absolute;
+	width: 175px;
+	height: 227px;
+	background: #fff;
+	left: -48px;
+	top: 26px;
+	box-shadow: 0 0 5px #aaa;
+	display: none;
+	z-index: 2;
+}
+.sn-mobile .sn-qrcode-content {
+	width: 175px;
+	height: 175px;
+	margin: 5px 0 0 0;
+	background: url(../../img/tmall/icon/nav-mobile-1.png) 0 0 no-repeat;
+}
+.sn-mobile .sn-qrcode p {
+	text-indent: -9999px;
+	overflow: hidden;
+	margin: 0 15px;
+	line-height: 35px;
+	background: url(../../img/tmall/icon/nav-mobile-2.png) center bottom no-repeat;
+}
+.sn-mobile .sn-qrcode b {
+	width: 0;
+	height: 0;
+	content: "";
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 4px solid #fff;
+	position: absolute;
+	top: -4px;
+	left: 85px;
+}
 /*顶部导航End*/
+/*头部*/
+#header {
+	height: 130px;
+}
+#header .header-wraper {
+	width: 1230px;
+	height: 130px;
+	margin: 0 auto;
+	position: relative;
+	left: -15px;
+}
+#header #header-logo {
+	width: 200px;
+	height: 130px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#header #header-logo img {
+	position: relative;
+	left: -45px;
+}
+#header #header-search {
+	width: 625px;
+	height: 64px;
+	padding-top: 38px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	left: 15px;
+	overflow: hidden;
+}
+#header #header-search .mallSearch-form {
+	position: relative;
+	border: 2px solid #c40000;
+	border-right: none;
+}
+#header-search .mallSearch-form fieldset {
+	border: 0;
+}
+.mallSearch-form fieldset legend {
+	display: none;
+}
+.mallSearch-form fieldset .combobox-input {
+	height: 36px;
+	width: 491px;
+	font: 16px/22px arial;
+	color: #000;
+	padding: 5px 3px 5px 5px;
+	box-sizing: border-box;
+}
+.mallSearch-form fieldset .combobox {
+	position: relative;
+	float: left;
+}
+.mallSearch-form fieldset .combobox-placeholder {
+	color: #666;
+	font-size: 14px;
+	line-height: 36px;
+	height: 36px;
+	position: absolute;
+	top: 0;
+	left: 8px;
+	cursor: text;
+}
+.mallSearch-form fieldset button {
+	width: 132px;
+	height: 36px;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	border: 0;
+	color: #fff;
+	background-color: #c40000;
+	overflow: hidden;
+	font-family: "Microsoft YaHei",微软雅黑;
+}
+#header-search .hot-query {
+	height: 18px;
+	font-size: 14px;
+	padding: 4px 0 0 0;
+	overflow: hidden;
+	width: 100%;
+	margin-left: -13px;
+}
+#header-search .hot-query li {
+	display: inline-block;
+	height: 15px;
+	float: left;
+	margin-top: 4px;
+	border-left: 1px solid #ccc;
+	line-height: 1.1;
+	padding: 0 12px;
+	color: #ccc;
+}
+#header-search .hot-query .hot-query-highlight a {
+	color: #c40000;
+}
 /*@group page components 页面组件-----------------------------*/
 
 

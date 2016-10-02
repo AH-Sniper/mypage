@@ -10,22 +10,49 @@
 		$(document).ready(function() {
 			var body_width = document.body.clientWidth;
 			var $sn_wraper = $('#sn-wraper');
+			var $header_search = $('#header-search');
+			var $header_search_input = $('#mq');
+			var $header_search_placeholder = $('.combobox-placeholder');
 
+			//根据浏览器宽度调整页面样式
 			if (body_width < 1260) {
 				$sn_wraper.css({'width':'982px','left':'0'});
+				$header_search.css('width','410px');
+				$header_search_input.css('width','276px');
 			} else {
 				$sn_wraper.css({'width':'1230px','left':'-15px'});
+				$header_search.css('width','625px');
+				$header_search_input.css('width','491px');
 			}
-			// alert(body_width);
+			//搜索框事件
+			$header_search_input.focus(function() {
+				$header_search_placeholder.css('color','#ccc');
+			})
+			$header_search_input.blur(function() {
+				$header_search_placeholder.css('color','#666');
+				if(!$header_search_input.val()) {
+					$header_search_placeholder.css('display','block');
+				}
+			})
+			$header_search_input.keydown(function() {
+				$header_search_placeholder.css('display','none');
+			})
+			//
 		});
 		window.onresize = function() {
 			var body_width = document.body.clientWidth;
 			var $sn_wraper = $('#sn-wraper');
+			var $header_search = $('#header-search');
+			var $header_search_input = $('#mq');
 			
 			if (body_width < 1260) {
 				$sn_wraper.css({'width':'982px','left':'0'});
+				$header_search.css('width','410px');
+				$header_search_input.css('width','276px');
 			} else {
 				$sn_wraper.css({'width':'1230px','left':'-15px'});
+				$header_search.css('width','625px');
+				$header_search_input.css('width','491px');
 			}
 		}
 	</script>
@@ -71,7 +98,13 @@
 						</div>
 					</li>
 					<li class="sn-separator"></li>
-					<li class="sn-mobile"><span class="sn-icon mobile-icon"></span><a href="">手机版</a></li>
+					<li class="sn-mobile"><span class="sn-icon mobile-icon"></span><a href="">手机版</a>
+					<div class="sn-qrcode">
+						<div class="sn-qrcode-content"></div>
+						<p>扫一扫，定制我的天猫！</p>
+						<b></b>
+					</div>
+					</li>
 					<li class="sn-home"><a href="">淘宝网</a></li>
 					<li class="sn-b"><a href="">企业购</a></li>
 					<li class="sn-seller">
@@ -183,7 +216,41 @@
 			</div>
 		</div>
 	</div>
-
+	<div id="header">
+		<div class="header-wraper">
+			<div id="header-logo"><img src="img/tmall/header-logo.gif" alt="天猫商城"></div>
+			<div id="header-search">
+				<form action="//list.tmall.com/search_product.htm" name="searchTop" class="mallSearch-form">
+					<fieldset>
+						<legend>天猫搜索</legend>
+						<div class="mallSearch-input">
+							<div class="combobox">
+								<div class="combobox-input-wrap">
+									<input type="text" name="q" value id="mq" class="combobox-input" title="请输入搜索文字">
+								</div>
+								<label for="mq" class="combobox-placeholder">试试在搜索框里随便输点什么吧！</label>
+							</div>
+							<button type="submit">搜索</button>
+						</div>
+					</fieldset>
+				</form>
+				<ul class="hot-query">
+					<li><a href="#">打底衫</a></li>
+					<li class="hot-query-highlight"><a href="#">大闸蟹</a></li>
+					<li><a href="#">四件套</a></li>
+					<li class="hot-query-highlight"><a href="#">蓝牙耳机</a></li>
+					<li><a href="#">文胸</a></li>
+					<li><a href="#">冲锋衣</a></li>
+					<li class="hot-query-highlight"><a href="#">女包</a></li>
+					<li><a href="#">衬衫男</a></li>
+					<li class="hot-query-highlight"><a href="#">零食</a></li>
+					<li><a href="#">吹风机</a></li>
+					<li><a href="#">牛仔裤女</a></li>
+					<li><a href="#">双肩包</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
