@@ -1,0 +1,11 @@
+1、问题经过简化（实际上存在1244和1260两个临界值）：
+   浏览器页面宽度（document.body.clientWidth）在临界值1260px上下会出现不同的响应。
+
+   由于天猫页面右侧有个侧边栏（宽35px），当body.clientWidth 小于1260px时，该侧边栏主要部分隐藏，只留下“购物车”和“返回顶部”，鼠标移动到距右边界35px以内时侧边栏出现，此时，顶部导航条和页面内容区域固定宽度982px，正常居中，但页面容区域内容有删减，一般是右侧部分内容被割掉。
+   当body.clientWidth 大于等于1260px时，右部侧边栏（宽35px）出现，顶部导航条固定宽度1230px，相对自身定位left:-15px，页面内容区域固定宽度1230px，整体有个padding-right:30px。
+--------------
+解决方法：window.onresize = function(){} 用于浏览器窗口大小发生改变时触发函数
+	  if (document.body.clientWidth < 1260) { $().css({'width':'982px','left':'0'})}
+	  else { $().css({'width':'1230px','left':'-15px'})}
+
+2、

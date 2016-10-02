@@ -1,0 +1,330 @@
+/*重置样式*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input {margin: 0;padding: 0;}
+body {font-size: 12px; color: #999;}
+img {border: none;}
+ol,ul,li {list-style: none;}
+input,select,textarea {outline: none;border: none;}
+textarea {resize: none;}
+a {text-decoration: none;color: #999;}
+em {font-style: normal;}
+
+.clearfix {zoom: 1;}
+.clearfix:after {display: block;clear: both;content: "";}
+.fl {float: left;}
+.fr {float: right;}
+
+body,button,input,select,textarea {
+	font: 12px/1.5 arial;
+}
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+/*@group general styles 一般性样式-----------------------------*/
+#sn-content a:hover,#sn-content .sn-quick-menu .sn-cart a:hover .cart-count {
+	color: #c40000;
+}
+.sn-mytaobao #mytaobao-cm a:hover {
+	color: #c40000;
+	text-decoration: underline;
+}
+.sn-favorite #favorite-cm a:hover {
+	color: #c40000;
+	text-decoration: underline;
+}
+.sn-seller #seller-cm a:hover {
+	color: #c40000;
+	text-decoration: underline;
+}
+.sn-menu:hover {
+	background: #fff;
+	height: 33px;
+}
+.sn-mytaobao .sn-menu:hover .menu-cm,.sn-favorite .sn-menu:hover .menu-cm,.sn-seller .sn-menu:hover .menu-cm {
+	display: block;
+}
+.sn-sitemap .sn-menu:hover #sitemap {
+	display: block;
+}
+#sitemap .sitemap-icon {
+	position: absolute;
+	top: -7px;
+	right: -9px;
+	width: 9px;
+	height: 11px;
+	overflow: hidden;
+	background: url(../../img/tmall/icon/icon2.png) no-repeat -9999px -9999px;
+}
+#sitemap .sitemap-icon-new {
+	background-position: -37px -11px;
+}
+#sitemap .sitemap-icon-hot {
+	background-position: -37px 0;
+}
+/*辅助样式：当浏览器页面宽度缩小到1260px以下时---------------------------*/
+
+
+
+/*@group page structure 页面结构-----------------------------*/
+/*顶部导航*/
+#site-nav {
+	font-family: "Microsoft YaHei",arial,sans-serif;
+	height: 32px;
+	min-width: 990px;
+	width: auto;
+	background: #f2f2f2;
+	color: #999;
+	border-bottom: 1px solid #e5e5e5;
+}
+#sn-wraper {
+	width: 1230px;
+	height: 32px;
+	margin: 0 auto;
+	/*background: lightgreen;*/
+	position: relative;
+	left: -15px;
+}
+#sn-content {
+	width: 100%;
+	height: 32px;
+}
+#sn-content .sn-login-info {
+	height: 32px;
+	width: 218px;
+	line-height: 32px;
+	position: relative;
+}
+#sn-content .sn-login-info em {
+	float: left;
+}
+#sn-content .sn-login-info .sn-login {
+	padding: 0 10px 0 20px;
+	float: left;
+}
+#sn-content .sn-login-info .sn-register {
+	padding: 0 10px;
+	float: left;
+}
+#sn-content .sn-quick-menu {
+	width: 696px;
+	height: 32px;
+	line-height: 32px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#sn-content .sn-quick-menu li {
+	float: left;
+}
+#sn-content .sn-quick-menu .menu-mt {
+	padding: 0 14px 0 10px;
+	display: inline-block;
+	height: 32px;
+	border-left: 1px solid #f2f2f2;
+	border-right: 1px solid #f2f2f2;
+	/*position: relative;*/
+}
+#sn-content .sn-quick-menu .menu-mt b {
+	position: absolute;
+	top: 15px;
+	right: 6px;
+	font-size: 0;
+	width: 0;
+	height: 0;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 3px solid #bbb;
+}
+#sn-content .sn-quick-menu a.menu-mt:hover  {
+	text-decoration: underline;
+}
+#sn-content .sn-quick-menu .sn-separator {
+	width: 0;
+	height: 14px;
+	line-height: 14px;
+	border-left: 1px solid #ccc;
+	margin: 9px 2px 0 5px;
+}
+.sn-quick-menu .sn-mybrand,.sn-quick-menu .sn-cart,.sn-quick-menu .sn-mobile,.sn-quick-menu .sn-home,.sn-quick-menu .sn-b {
+	padding: 0 10px;
+}
+#sn-content .sn-quick-menu .sn-icon {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	line-height: 32px;
+	margin-right: 4px;
+	position: relative;
+	top: 1px;
+}
+.mybrand-icon {
+	background: url(../../img/tmall/icon/nav-icon.png) 0 0;
+}
+.cart-icon {
+	background: url(../../img/tmall/icon/nav-icon.png) 0 -12px;
+}
+.mobile-icon {
+	background: url(../../img/tmall/icon/nav-icon.png) 0 -24px;
+}
+.sitemap-icon {
+	background: url(../../img/tmall/icon/nav-icon.png) 0 -36px;
+}
+#sn-content .sn-quick-menu .sn-sitemap h3 {
+	font-size: 12px;
+	font-weight: normal;
+	cursor: pointer;
+}
+#sn-content .sn-quick-menu .sn-cart .cart-count {
+	color: #666;
+	padding: 0 2px;
+	font-weight: 700;
+	font-family: Arial;
+}
+#sn-content .sn-quick-menu .menu-cm {
+	padding: 8px 10px;
+	background: #fff;
+}
+#sn-content .sn-quick-menu .sn-menu {
+	position: relative;
+}
+.sn-mytaobao .menu-cm,.sn-favorite .menu-cm{
+	position: absolute;
+	border: 1px solid #eee;
+	border-top: none; 
+	top: 33px;
+	left: 0;
+	display: none;
+}
+.sn-seller .menu-cm {
+	position: absolute;
+	border: 1px solid #eee;
+	border-top: none; 
+	display: none;
+	top: 33px;
+	left: -64px;
+}
+.sn-mytaobao #mytaobao-cm a,.sn-favorite #favorite-cm a {
+	color: #666;
+	display: block;
+	height: 20px;
+	line-height: 20px;
+}
+.sn-mytaobao #mytaobao-cm a {
+	width: 74px;
+}
+.sn-favorite #favorite-cm a {
+	width: 62px;
+}
+.sn-seller .menu-cm a {
+	display: block;
+	width: 48px;
+	margin-right: 20px;
+	float: left;
+	color: #666;
+	line-height: 22px;
+}
+#seller-cm {
+	margin-top: -5px;
+}
+.sn-seller .menu-cm dl {
+	width: 136px;
+	border-bottom: 1px dotted #827777;
+	padding: 5px 0;
+}
+.sn-seller .menu-cm #seller-cm {
+	width: 116px;
+	overflow: hidden;
+}
+.sn-seller .menu-cm dt {
+	color: #666;
+	font-weight: 700;
+	line-height: 1.4;
+}
+#sitemap {
+	position: absolute;
+	width: 1198px;
+	padding: 25px 0;
+	background: #fff;
+	border: 1px solid #eee;
+	border-top: none;
+	top: 33px;
+	right: 0;
+	left: auto;
+	display: none;
+}
+#sitemap .site-hot {
+	width: 275px;
+	float: left;
+}
+#sitemap .site-market {
+	width: 375px;
+	float: left;
+	border-left: 1px solid #f5f5f5;
+	border-right: 1px solid #f5f5f5;
+}
+#sitemap .site-brand {
+	width: 270px;
+	float: left;
+	border-right: 1px solid #f5f5f5;
+}
+#sitemap .site-help,#sitemap .site-hot,#sitemap .site-market,#sitemap .site-brand {
+	padding-left: 30px;
+	overflow: hidden;
+	height: 200px;
+	line-height: 1.4;
+	font-size: 12px;
+}
+#sitemap h2 {
+	font-size: 16px;
+	padding-bottom: 8px;
+	font-weight: 500;
+}
+#sitemap h2 span {
+	padding-left: 6px;
+}
+#sitemap .site-list {
+	margin-right: -20px;
+	overflow: hidden;
+
+}
+#sitemap .site-list li {
+	width: 95px;
+	float: left;
+	padding: 6px 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1.4;
+}
+#sitemap .site-list a {
+	color: #666;
+	position: relative;
+}
+#sitemap .site-hot h2 {
+	color: #f56a00;
+}
+#sitemap .site-hot a:hover {
+	color: #f56a00;
+	text-decoration: underline;
+}
+#sitemap .site-market h2 {
+	color: #2263d4;
+}
+#sitemap .site-market a:hover {
+	color: #2263d4;
+	text-decoration: underline;
+}
+#sitemap .site-brand h2,#sitemap .site-help h2 {
+	color: #666;
+}
+#sitemap .site-brand a:hover,#sitemap .site-help a:hover {
+	text-decoration: underline;
+}
+/*顶部导航End*/
+/*@group page components 页面组件-----------------------------*/
+
+
+
+/*@group overrides 覆盖-----------------------------

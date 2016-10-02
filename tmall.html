@@ -2,9 +2,190 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Tmall</title>
+	<title>天猫tmall.com--上天猫，就够了</title>
+	<meta name="author" content="Feng Wang">
+	<script src="script/jquery.min.js"></script>
+	<link rel="stylesheet" href="style/tmall/tmall.css">
+	<script>
+		$(document).ready(function() {
+			var body_width = document.body.clientWidth;
+			var $sn_wraper = $('#sn-wraper');
+
+			if (body_width < 1260) {
+				$sn_wraper.css({'width':'982px','left':'0'});
+			} else {
+				$sn_wraper.css({'width':'1230px','left':'-15px'});
+			}
+			// alert(body_width);
+		});
+		window.onresize = function() {
+			var body_width = document.body.clientWidth;
+			var $sn_wraper = $('#sn-wraper');
+			
+			if (body_width < 1260) {
+				$sn_wraper.css({'width':'982px','left':'0'});
+			} else {
+				$sn_wraper.css({'width':'1230px','left':'-15px'});
+			}
+		}
+	</script>
 </head>
 <body>
-	天猫首页
+	<div id="site-nav">
+		<div id="sn-wraper">
+			<div id="sn-content" class="clearfix">
+				<p class="sn-login-info">
+					<em>喵，欢迎来天猫</em>
+					<a href="https://login.tmall.com/?spm=875.7931836/B.a2226mz.1.Wh6EYx&redirectURL=https%3A%2F%2Fwww.tmall.com%2F" class="sn-login" target="_blank">请登录</a>
+					<a href="https://register.tmall.com/?spm=875.7931836/B.a2226mz.2.Wh6EYx" class="sn-register" target="_blank">免费注册</a>
+				</p>
+				<ul class="sn-quick-menu clearfix">
+					<li class="sn-mytaobao">
+						<div class="sn-menu">
+							<a class="menu-mt" href="#">
+								我的淘宝
+								<b></b>
+							</a>
+							<div class="menu-cm">
+								<div id="mytaobao-cm">
+									<a href="#">已买到的宝贝</a>
+									<a href="#">已卖出的宝贝</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="sn-mybrand"><span class="sn-icon mybrand-icon"></span><a href="#">我关注的品牌</a></li>
+					<li class="sn-cart"><a href=""><span class="sn-icon cart-icon"></span>购物车<span class="cart-count">0</span>件</a></li>
+					<li class="sn-favorite">
+						<div class="sn-menu">
+							<a class="menu-mt" href="#">
+								收藏夹
+								<b></b>
+							</a>
+							<div class="menu-cm">
+								<div id="favorite-cm">
+									<a href="#">收藏的宝贝</a>
+									<a href="#">收藏的店铺</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="sn-separator"></li>
+					<li class="sn-mobile"><span class="sn-icon mobile-icon"></span><a href="">手机版</a></li>
+					<li class="sn-home"><a href="">淘宝网</a></li>
+					<li class="sn-b"><a href="">企业购</a></li>
+					<li class="sn-seller">
+						<div class="sn-menu">
+							<a class="menu-mt" href="#">
+								商家支持
+								<b></b>
+							</a>
+							<div class="menu-cm">
+								<div id="seller-cm">
+									<dl class="clearfix">
+										<dt>商家：</dt>
+										<dd>
+											<a href="#">商家中心</a>
+											<a href="#">商家入驻</a>
+											<a href="#">运营服务</a>
+											<a href="#">商家品控</a>
+											<a href="#">商家工具</a>
+											<a href="#">商家规则</a>
+											<a href="#">天猫智库</a>
+											<a href="#">喵言喵语</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt>帮助：</dt>
+										<dd><a href="#">帮助中心</a></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="sn-sitemap">
+						<div class="sn-menu">
+							<h3 class="menu-mt">
+							<span class="sn-icon sitemap-icon"></span>网站导航
+								<b></b>
+							</h3>
+							<div id="sitemap" class="clearfix">
+								<div class="site-hot">
+									<h2>
+										热点推荐<span>Hot</span>
+									</h2>
+									<ul class="site-list clearfix">
+										<li><a href="#">天猫超市</a></li>
+										<li><a href="#">喵鲜生</a></li>
+										<li><a href="#">科技新品<i class="sitemap-icon sitemap-icon-new"></i></a></li>
+										<li><a href="#">女装新品<i class="sitemap-icon sitemap-icon-hot"></i></a></li>
+										<li><a href="#">酷玩街</a></li>
+										<li><a href="#">内衣新品<i class="sitemap-icon sitemap-icon-hot"></i></a></li>
+										<li><a href="#">试美妆</a></li>
+										<li><a href="#">运动新品</a></li>
+										<li><a href="#">时尚先生<i class="sitemap-icon sitemap-icon-hot"></i></a></li>
+										<li><a href="#">精明妈咪</a></li>
+										<li><a href="#">吃乐会<i class="sitemap-icon sitemap-icon-new"></i></a></li>
+										<li><a href="#">企业采购</a></li>
+										<li><a href="#">会员积分</a></li>
+										<li><a href="#">天猫国际</a></li>
+									</ul>
+								</div>
+								<div class="site-market">
+									<h2>
+										行业市场<span>Market</span>
+									</h2>
+									<ul class="site-list clearfix">
+										<li><a href="#">美妆</a></li>
+										<li><a href="#">电器</a></li>
+										<li><a href="#">女装<i class="sitemap-icon sitemap-icon-hot"></i></a></li>
+										<li><a href="#">男装<i class="sitemap-icon sitemap-icon-hot"></i></a></li>
+										<li><a href="#">女鞋</a></li>
+										<li><a href="#">男鞋</a></li>
+										<li><a href="#">内衣<i class="sitemap-icon sitemap-icon-hot"></i></a></li>
+										<li><a href="#">箱包</a></li>
+										<li><a href="#">运动</a></li>
+										<li><a href="#">母婴</a></li>
+										<li><a href="#">家装</a></li>
+										<li><a href="#">医药</a></li>
+										<li><a href="#">食品</a></li>
+										<li><a href="#">配饰<i class="sitemap-icon sitemap-icon-new"></i></a></li>
+										<li><a href="#">汽车</a></li>
+									</ul>
+								</div>
+								<div class="site-brand">
+									<h2>
+										品牌风尚<span>Brand</span>
+									</h2>
+									<ul class="site-list clearfix">
+										<li><a href="#">尚天猫</a></li>
+										<li><a href="#">大牌街</a></li>
+										<li><a href="#">潮牌街</a></li>
+										<li><a href="#">天猫原创</a></li>
+										<li><a href="#">什么牌子好</a></li>
+									</ul>
+								</div>
+								<div class="site-help">
+									<h2>
+										服务指南<span>Help</span>
+									</h2>
+									<ul class="site-list clearfix">
+										<li><a href="#">帮助中心 </a></li>
+										<li><a href="#">品质保障 </a></li>
+										<li><a href="#">特色服务 </a></li>
+										<li><a href="#">7天退换货 </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
