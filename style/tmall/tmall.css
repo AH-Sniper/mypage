@@ -480,6 +480,50 @@ body,button,input,select,textarea {
 	color: #c40000;
 }
 /*头部End*/
+/*主导航*/
+#main-nav {
+	height: 36px;
+	width: 100%;
+	min-width: 990px;
+	position: relative;
+	background-color: #dd2727;
+	line-height: 36px;
+	font-family: "Microsoft YaHei";
+}
+#main-nav-wraper {
+	width: 1230px;
+	height: 36px;
+	padding-right: 30px;
+	margin: 0 auto;
+}
+#main-nav-cont {
+	margin-left: 215px;	
+}
+#main-nav-cont a {
+	height: 36px;
+	padding: 0 15px;
+	cursor: pointer;
+	font-size: 16px;
+	float: left;
+	color: #fff;
+	position: relative;
+}
+#main-nav-cont a img {
+	width: 90px;
+	height: 36px;
+	display: block;
+}
+.main-nav-hover {
+	background: url(../../img/tmall/main-nav-hover.png) no-repeat;
+	background-size: 40px 15px;
+	width: 40px;
+	height: 15px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -20px;
+	opacity: 0;
+}
 /*@group page components 页面组件-----------------------------*/
 /*右侧边栏*/
 #sidebar {
@@ -637,4 +681,5 @@ body,button,input,select,textarea {
 .not-see {
 	left: 35px;
 }
+
 /*@group overrides 覆盖-----------------------------

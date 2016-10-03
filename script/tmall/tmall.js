@@ -35,13 +35,32 @@ $(document).ready(function() {
 	});
 	//返回顶部按钮
 	$('#bottom').click(function() {
-		$('body').animate({scrollTop:0}, 300);
+		$('body').animate({scrollTop:0}, 280);
 	});
-
+	//主导航hover
+	$('#main-nav-cont a').each(function(index){
+		$(this).hover(function() {
+			$('.main-nav-hover').eq(index).stop(true,true)
+				.animate({opacity: '1', top: '-10px'}, 150);
+		},function() {
+			$('.main-nav-hover').eq(index).stop(true,true)
+				.animate({opacity: '0', top: '0'}, 150);
+		})
+	});
+	//
 });
 //浏览器窗口大小发生改变时触发事件
 $(window).resize(function() {
 	responsiveCheck();
+});
+//滚动条滚动事件
+$(window).scroll(function() {
+	var scroll_top = $(document).scrollTop();
+	if (scroll_top > 300) {
+		$('#bottom').fadeIn();
+	} else {
+		$('#bottom').fadeOut();
+	}
 });
 //响应浏览器窗口宽度函数
 function responsiveCheck() {
@@ -68,7 +87,7 @@ function responsiveCheck() {
 		$header_search.css('width','410px');
 		$header_search_input.css('width','276px');
 		$header_wraper.css({'width':'990px','left':'0'});
-		
+		//右侧边栏
 		$bgcolor.css('left','35px');
 		$('.not-see').css('left','35px');
 		$sidebar.unbind('mouseenter').unbind('mouseleave').bind('mouseenter',function() {
@@ -78,16 +97,21 @@ function responsiveCheck() {
 			$bgcolor.stop(true,true).animate({left:'35px'},300);
 			$('.not-see').stop(true,true).animate({left:'35px'},300);
 		});     // 根据页面宽度决定是否绑定 hover 事件
-
+		//主导航
+		$('#main-nav-wraper').css({'width': '982px','padding-right': '0','height':'72px'});
+		$('#main-nav-cont').css({'width':'760px','height':'72px'});
 	} else {
 		$sn_wraper.css({'width':'1230px','left':'-15px'});
 		$header_search.css('width','625px');
 		$header_search_input.css('width','491px');
 		$header_wraper.css({'width':'1230px','left':'-15px'});
-		
+		//右侧边栏
 		$bgcolor.css('left',0);
 		$sidebar.unbind('mouseenter').unbind('mouseleave');
 		$('.not-see').css('left',0);
+		//主导航
+		$('#main-nav-wraper').css({'width': '1230px','padding-right': '30px','height':'36px'});
+		$('#main-nav-cont').css({'width':'1045px','height':'36px'});
 	}
 
 	if(body_height < 506) {
