@@ -4,8 +4,25 @@
    由于天猫页面右侧有个侧边栏（宽35px），当body.clientWidth 小于1260px时，该侧边栏主要部分隐藏，只留下“购物车”和“返回顶部”，鼠标移动到距右边界35px以内时侧边栏出现，此时，顶部导航条和页面内容区域固定宽度982px，正常居中，但页面容区域内容有删减，一般是右侧部分内容被割掉。
    当body.clientWidth 大于等于1260px时，右部侧边栏（宽35px）出现，顶部导航条固定宽度1230px，相对自身定位left:-15px，页面内容区域固定宽度1230px，整体有个padding-right:30px。
 --------------
-解决方法：window.onresize = function(){} 用于浏览器窗口大小发生改变时触发函数
+解决方法：$(window).resize(function(){}) 用于浏览器窗口大小发生改变时触发函数
 	  if (document.body.clientWidth < 1260) { $().css({'width':'982px','left':'0'})}
 	  else { $().css({'width':'1230px','left':'-15px'})}
 
-2、
+2、右侧边栏内各小部件位置，上下分别以“购物车”和“Top”为基准，“Top”一直位于页面最底部，而当页面高度小于506px时，购物车距顶部78px，当页面高度大于506px时，购物车距顶部document.body.clientHeight 的24% 距离，其他小部件相对“购物车确定位置”。
+然后把整个上半区小部件包围在35×358px的容器1中，下半区小部件包围在35×105px的容器2中，当页面高度小于506px时，上半区距顶部35px，当页面高度大于506px时，上半区距顶部clientHeight 的18%距离。
+用到的知识点：
+$(window).height(); //浏览器时下窗口可视区域高度
+$(window).width(); //浏览器时下窗口可视区域宽度
+
+$(document).height(); //浏览器时下窗口文档的高度 或 $(document.body).height();
+或  $('body').height()
+$(document).width();//浏览器时下窗口文档对于象宽度 或$(document.body).width();
+或  $('body').width()
+
+获取整页宽高，为兼容不同浏览器可用：
+$(document).width() < $('body').width() ? $(document).width() : $('body').width(); 
+$(document).height() < $('body').height() ? $(document).height() : $('body').height();
+返回顶部
+$('body').animate({scrollTop:0}, 300);
+
+

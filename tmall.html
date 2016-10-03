@@ -3,61 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>天猫tmall.com--上天猫，就够了</title>
-	<meta name="author" content="Feng Wang">
+	<meta name="author" content="王峰 swjtuwangfeng@126.com">
 	<script src="script/jquery.min.js"></script>
 	<link rel="stylesheet" href="style/tmall/tmall.css">
-	<script>
-		$(document).ready(function() {
-			var body_width = document.body.clientWidth;
-			var $sn_wraper = $('#sn-wraper');
-			var $header_search = $('#header-search');
-			var $header_search_input = $('#mq');
-			var $header_search_placeholder = $('.combobox-placeholder');
-
-			//根据浏览器宽度调整页面样式
-			if (body_width < 1260) {
-				$sn_wraper.css({'width':'982px','left':'0'});
-				$header_search.css('width','410px');
-				$header_search_input.css('width','276px');
-			} else {
-				$sn_wraper.css({'width':'1230px','left':'-15px'});
-				$header_search.css('width','625px');
-				$header_search_input.css('width','491px');
-			}
-			//搜索框事件
-			$header_search_input.focus(function() {
-				$header_search_placeholder.css('color','#ccc');
-			})
-			$header_search_input.blur(function() {
-				$header_search_placeholder.css('color','#666');
-				if(!$header_search_input.val()) {
-					$header_search_placeholder.css('display','block');
-				}
-			})
-			$header_search_input.keydown(function() {
-				$header_search_placeholder.css('display','none');
-			})
-			//
-		});
-		window.onresize = function() {
-			var body_width = document.body.clientWidth;
-			var $sn_wraper = $('#sn-wraper');
-			var $header_search = $('#header-search');
-			var $header_search_input = $('#mq');
-			
-			if (body_width < 1260) {
-				$sn_wraper.css({'width':'982px','left':'0'});
-				$header_search.css('width','410px');
-				$header_search_input.css('width','276px');
-			} else {
-				$sn_wraper.css({'width':'1230px','left':'-15px'});
-				$header_search.css('width','625px');
-				$header_search_input.css('width','491px');
-			}
-		}
-	</script>
 </head>
 <body>
+	<!-- 顶部导航 -->
 	<div id="site-nav">
 		<div id="sn-wraper">
 			<div id="sn-content" class="clearfix">
@@ -216,6 +167,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- 头部搜索框 -->
 	<div id="header">
 		<div class="header-wraper">
 			<div id="header-logo"><img src="img/tmall/header-logo.gif" alt="天猫商城"></div>
@@ -251,8 +203,56 @@
 			</div>
 		</div>
 	</div>
+	<!-- 右侧边栏 -->
+	<div id="sidebar">
+		<div id="top-part">
+			<div class="top-small-box tip-need not-see" id="top1">
+				<img src="img/tmall/right-sidebar/top-1.png" alt="我的特权">
+				<div class="box-tip">我的特权<b class="box-tip-arrow"></b></div>
+			</div>
+			<div id="top-cart">
+				<div id="cart-icon"></div>
+				<div id="cart-text">购物车</div>
+				<div id="cart-border"></div>
+			</div>
+			<div class="top-small-box tip-need not-see" id="mid1">
+				<img src="img/tmall/right-sidebar/mid-1.png" alt="我的资产">
+				<div class="box-tip">我的资产<b class="box-tip-arrow"></b></div>
+			</div>
+			<div class="top-small-box tip-need not-see" id="mid2">
+				<img src="img/tmall/right-sidebar/mid-2.png" alt="我关注的品牌">
+				<div class="box-tip">我关注的品牌<b class="box-tip-arrow"></b></div>
+			</div>
+			<div class="top-small-box tip-need not-see" id="mid3">
+				<img src="img/tmall/right-sidebar/mid-3.png" alt="我的收藏">
+				<div class="box-tip">我的收藏<b class="box-tip-arrow"></b></div>
+			</div>
+			<div class="top-small-box tip-need not-see" id="mid4">
+				<img src="img/tmall/right-sidebar/mid-4.png" alt="我看过的">
+				<div class="box-tip">我看过的<b class="box-tip-arrow"></b></div>
+			</div>
+			<div class="top-small-box tip-need not-see" id="mid5">
+				<img src="img/tmall/right-sidebar/mid-5.png" alt="我要充值">
+				<div class="box-tip">我要充值<b class="box-tip-arrow"></b></div>
+			</div>
+		</div>
+		<div id="bottom-part">
+			<div class="bottom-small-box tip-need not-see" id="bottom1">
+				<div class="box-tip">用户反馈<b class="box-tip-arrow"></b></div>
+			</div>
+			<div class="bottom-small-box not-see" id="bottom2">
+				<div id="qrcode-tip"><b id="qrcode-tip-arrow"></b></div>
+			</div>
+			<div class="bottom-small-box tip-need" id="bottom">
+				<div class="box-tip">返回顶部<b class="box-tip-arrow"></b></div>
+			</div>
+		</div>
+		<div id="bgcolor"></div>
+	</div>
 
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<!-- 脚本文件 -->
+	<script src="script/tmall/tmall.js"></script>
 </body>
 </html>

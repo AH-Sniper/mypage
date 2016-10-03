@@ -42,6 +42,9 @@ body,button,input,select,textarea {
 	background: #fff;
 	height: 33px;
 }
+#header-search .hot-query a:hover {
+	color: #c40000;
+}
 .sn-mytaobao .sn-menu:hover .menu-cm,.sn-favorite .sn-menu:hover .menu-cm,.sn-seller .sn-menu:hover .menu-cm {
 	display: block;
 }
@@ -68,8 +71,13 @@ body,button,input,select,textarea {
 	background-position: -37px 0;
 }
 /*辅助样式：当浏览器页面宽度缩小到1260px以下时---------------------------*/
+/*
+#sn-wraper { width: 982px; left: 0; }
+#header-search { width: 410px; }
+#mq { width: 276px; }
+.header-wraper { width: 990px; left: 0; }
 
-
+*/
 
 /*@group page structure 页面结构-----------------------------*/
 /*顶部导航*/
@@ -370,6 +378,8 @@ body,button,input,select,textarea {
 /*头部*/
 #header {
 	height: 130px;
+	width: 100%;
+	min-width: 990px;
 }
 #header .header-wraper {
 	width: 1230px;
@@ -469,8 +479,162 @@ body,button,input,select,textarea {
 #header-search .hot-query .hot-query-highlight a {
 	color: #c40000;
 }
+/*头部End*/
 /*@group page components 页面组件-----------------------------*/
-
-
-
+/*右侧边栏*/
+#sidebar {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 35px;
+	z-index: 5
+}
+#top-part {
+	position: relative;
+	width: 35px;
+	height: 358px;
+	z-index: 7;
+}
+#bottom-part {
+	width: 35px;
+	height: 105px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 8;
+}
+#bgcolor {
+	width: 35px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #000;
+	z-index: 6;
+}
+#sidebar .top-small-box {
+	width: 35px;
+	height: 35px;
+	margin: 8px 0;
+	background-color: #000;
+	cursor: pointer;
+	position: relative;
+}
+#sidebar .top-small-box:hover {
+	background-color: #c40000;
+}
+#sidebar #top-cart {
+	width: 35px;
+	height: 100px;
+	margin: 8px 0;
+	background-color: #000;
+	cursor: pointer;
+	position: relative;
+}
+#sidebar #top-cart:hover {
+	background-color: #c40000;
+}
+#sidebar #top-cart:hover #cart-icon {
+	background: url(../../img/tmall/right-sidebar/top-white.png) 0 0 no-repeat;
+}
+#top-cart #cart-icon {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	background: url(../../img/tmall/right-sidebar/top.png) 0 0 no-repeat;
+}
+#top-cart #cart-text {
+	width: 20px;
+	height: 50px;
+	position: absolute;
+	left: 7px;
+	top: 40px;
+	line-height: 16px;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	font-family: "Microsoft YaHei";
+}
+#top-cart #cart-border {
+	height: 98px;
+	width: 25px;
+	position: absolute;
+	left: 5px;
+	top: 0;
+	border-top: 1px solid #444;
+	border-bottom: 1px solid #444;
+}
+#bottom-part .bottom-small-box {
+	width: 35px;
+	height: 35px;
+	background-color: #000;
+	cursor: pointer;
+	position: relative;
+}
+#bottom-part .bottom-small-box:hover {
+	background-color: #c40000;
+}
+#bottom1 {
+	background: url(../../img/tmall/right-sidebar/bottom-1.png) 0 0 no-repeat;
+}
+#bottom2 {
+	background: url(../../img/tmall/right-sidebar/bottom-2.png) 0 0 no-repeat;
+}
+#bottom {
+	background: url(../../img/tmall/right-sidebar/bottom.png) 0 0 no-repeat;
+}
+#sidebar .box-tip {
+	width: 90px;
+	height: 35px;
+	position: absolute;
+	right: 70px;
+	top: -1px;
+	color: #fff;
+	background-color: #494949;
+	text-align: center;
+	line-height: 35px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	font-family: "Microsoft YaHei";
+	opacity: 0;
+	display: none;
+}
+.box-tip .box-tip-arrow {
+	display: block;
+	width: 0;
+	height: 0;
+	content: "";
+	position: absolute;
+	left: 90px;
+	top: 12px;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #494949;
+}
+#qrcode-tip {
+	width: 155px;
+	height: 207px;
+	position: absolute;
+	top: -161px;
+	right: 33px;
+	background-image: url(../../img/tmall/right-sidebar/bottom-qrcode.png);
+	background-repeat: no-repeat;
+	display: none;
+}
+#qrcode-tip-arrow {
+	display: block;
+	width: 0;
+	height: 0;
+	content: "";
+	position: absolute;
+	top: 175px;
+	right: -3px;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #f53b31;
+}
+.not-see {
+	left: 35px;
+}
 /*@group overrides 覆盖-----------------------------
