@@ -23,6 +23,15 @@ $(document).width();//浏览器时下窗口文档对于象宽度 或$(document.body).width();
 $(document).width() < $('body').width() ? $(document).width() : $('body').width(); 
 $(document).height() < $('body').height() ? $(document).height() : $('body').height();
 返回顶部
-$('body').animate({scrollTop:0}, 300);
+$('body').animate({scrollTop:0}, 300); 只兼容chrome
+其他浏览器支持$('html')
+这样写：
+if($('body')){
+$('body').animate({scrollTop:0}, 280);
+}
+if ($('html')) {
+$('html').animate({scrollTop:0}, 280);
+}
+
 
 
