@@ -266,7 +266,7 @@ body,button,input,select,textarea {
 	right: 0;
 	left: auto;
 	display: none;
-	z-index: 2;
+	z-index: 4;
 }
 #sitemap .site-hot {
 	width: 275px;
@@ -524,6 +524,239 @@ body,button,input,select,textarea {
 	margin-left: -20px;
 	opacity: 0;
 }
+/*banner*/
+.banner-and-category {
+	height: 500px;
+	width: 100%;
+	min-width: 990px;
+	position: relative;
+}
+.category-wraper {
+	height: 0;   /*重要，然后对下面的导航菜单使用绝对定位，不占空间*/
+	width: 1230px;
+	margin: 0 auto;
+	padding-right: 30px;
+	position: relative;
+}
+.banner {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.slider-content {
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.slider-pannel {
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.simple-banner {
+	width: 1230px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.simple-banner img {
+	width: 1180px;
+	height: 500px;
+	margin: 0 auto;
+	display: block;
+}
+.slider-wraper-1 {
+	position: relative;
+	width: 1120px;
+	height: 500px;
+}
+.slider-wraper-2 {
+	position: relative;
+	width: 1230px;    /*因为加上了 vip-pannel 的100px宽和它们之间10px的间距*/
+	height: 500px;
+	margin: 0 auto;
+	padding-right: 30px;
+}
+.slider-wraper-3 {
+	position: relative;
+	width: 1230px;
+	height: 500px;
+	margin: 0 auto;
+	padding-right: 30px;
+	overflow: hidden;
+}
+#slider-1 a b {
+	display: block;
+	width: 100%;
+	height: 500px;
+	background: url(../../img/tmall/banner/banner-1.jpg) 0 0 no-repeat;
+}
+#slider-3 a b {
+	display: block;
+	width: 100%;
+	height: 500px;
+	background: url(../../img/tmall/banner/banner-3.jpg) 0 0 no-repeat;
+}
+#slider-5 a b {
+	display: block;
+	width: 100%;
+	height: 500px;
+	background: url(../../img/tmall/banner/banner-5.jpg) 0 0 no-repeat;
+}
+#slider-6 a b {
+	display: block;
+	width: 100%;
+	height: 500px;
+	background: url(../../img/tmall/banner/banner-6.jpg) 0 0 no-repeat;
+}
+.small-banner {
+	display: block;
+	width: 220px;
+	height: 235px;
+	position: absolute;
+	margin-bottom: 10px;
+	right: 0;
+	vertical-align: middle;
+}
+.small-banner img {	width: 220px; height: 235px;}
+.sb1,.sb3,.sb5,.sb7 { top: 10px;}
+.sb2,.sb4,.sb6,.sb8 { bottom: 0;}
+
+#slider-1 {	opacity: 1;	display: block;	z-index: 1; background-color: #ff7791;}
+#slider-2 {	opacity: 0;	display: none;	z-index: 0; background-color: #e8e8e8;}
+#slider-3 {	opacity: 0;	display: none;	z-index: 0; background-color: #220000;}
+#slider-4 {	opacity: 0;	display: none;	z-index: 0; background-color: #ebebeb;}
+#slider-5 {	opacity: 0;	display: none;	z-index: 0; background-color: #0c62d2;}
+#slider-6 {	opacity: 0;	display: none;	z-index: 0; background-color: #ebbc2a;}
+
+.slider-nav {
+	text-align: center;
+	display: block;
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	bottom: 13px;
+	left: 0;
+}
+.slider-nav li {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border-radius: 11px;
+	margin-left: 10px;
+	padding: 2px;
+	background: url(../../img/tmall/banner/nav-li.png) no-repeat;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+.slider-nav li.selected {
+	background: url(../../img/tmall/banner/nav-li-selected.png) no-repeat;
+}
+#vip-pannel-wraper {
+	width: 1230px;
+	height: 0;
+/*	background-color: red;
+	z-index: 3;*/
+	position: absolute;
+	top: 0;
+	right: 50%;
+	margin-right: -615px;
+}
+#vip-pannel-wraper .vip-pannel {
+	width: 100px;
+	height: 480px;
+	position: absolute;
+	right: 25px;
+	top: 10px;
+	background-color: rgba(0,0,0,.5);
+	z-index: 3;
+	transition: background-color .2s;
+}
+#vip-pannel-wraper .vip-pannel:hover {
+	background-color: rgba(0,0,0,.8);
+}
+.vip-pannel .avatar-icon {
+	width: 100%;
+	height: 90px;
+	overflow: hidden;
+	background: url(../../img/tmall/banner/vip-pannel-avavtar.png) center center no-repeat;
+}
+.vip-pannel .login-info {
+	color: #fff;
+	width: 80px;
+	height: 83px;
+	margin: 0 auto;
+	font-size: 12px;
+	text-align: center;
+	font-family: "Microsoft YaHei";
+}
+.vip-pannel .login-info a {
+	color: #fff;
+	display: block;
+}
+.vip-pannel .login-info a:hover,.vip-pannel .more-info a:hover {
+	text-decoration: underline;
+}
+.vip-pannel .login-info .login-button {
+	height: 24px;
+	background-color: #dd2727;
+	line-height: 23px;
+	border-radius: 12px;
+	margin: 9px auto 6px;
+}
+.vip-pannel .seprate {
+	width: 80px;
+	margin: 0 auto;
+	height: 0;
+	border-bottom: 1px dashed rgba(0,0,0,.3);
+}
+.vip-pannel .more-info { margin-top: 20px; height: 128px;}
+.vip-pannel .more-info li,.more-info a{
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	font-family: "Microsoft YaHei";
+}
+.vip-pannel .more-info li {
+	height: 22px;
+	line-height: 22px;
+}
+.vip-pannel .more-info a {
+	display: block;
+	margin-top: 10px;
+}
+.vip-pannel .recommends {
+	height: 154px;
+	color: #fff;
+	text-align: center;
+	font-family: "Microsoft YaHei";
+}
+.vip-pannel .recommends .recommends-title {
+	height: 24px;
+	line-height: 24px;
+	background-color: rgba(0,0,0,.15);
+}
+.recommends a {
+	color: #fff;
+}
+.recommends a img {
+	width: 57px;
+	height: 57px;
+	margin: 17px auto 7px;
+	display: block;
+	border-radius: 28px;
+	vertical-align: middle;
+}
+.recommends a div { margin-bottom: 5px; }
 /*@group page components 页面组件-----------------------------*/
 /*右侧边栏*/
 #sidebar {

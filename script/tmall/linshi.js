@@ -47,7 +47,27 @@ $(document).ready(function() {
 				.animate({opacity: '0', top: '0'}, 150);
 		})
 	});
-	//
+	//banner 动画
+	var i = 1;
+	var btimer = null;
+	//鼠标移到 slider-nav 切换到相应的banner图
+	$('.slider-nav li').mouseover(function() {
+		i = $('.slider-nav li').index(this);
+		showBanner(i);
+	});
+
+	$('.slider-content').mouseover(function() {
+		if(btimer) {
+			clearInterval(btimer);
+		}
+	}).mouseout(function() {
+		btimer = setInterval(function(){
+			showBanner(i);
+			i++;
+			if (i > 5) { i = 0;};
+		},3000);
+	}).trigger('mouseout'); //鼠标移入banner区域，动画暂停,默认触发 mouseleave 即动画自动播放
+
 });
 //浏览器窗口大小发生改变时触发事件
 $(window).resize(function() {
@@ -62,6 +82,16 @@ $(window).scroll(function() {
 		$('#bottom').fadeOut();
 	}
 });
+//banner动画函数
+function showBanner(index) {
+	//显示图片
+	$('.slider-pannel').eq(index).css({'display':'block','z-index':'1'})
+		.stop(true,true).animate({'opacity':'1'},800)
+		.siblings().stop(true,true).animate({'opacity':'0'},800,function() {$(this).css({'display':'none','z-index':'0'})});
+	//slider-nav 改变样式
+	$('.slider-nav li').eq(index).addClass('selected')
+		.siblings().removeClass('selected');
+}
 //响应浏览器窗口宽度函数
 function responsiveCheck() {
 	// var body_width = document.body.clientWidth;
@@ -100,6 +130,15 @@ function responsiveCheck() {
 		//主导航
 		$('#main-nav-wraper').css({'width': '982px','padding-right': '0','height':'72px'});
 		$('#main-nav-cont').css({'width':'760px','height':'72px'});
+		//banner
+		$('.vip-pannel').css({'display':'none'});
+		$('#vip-pannel-wraper').css({'width': '990px','margin-right': '-495px'});
+		$('.small-banner').css({'display':'none'});
+		$('.slider-wraper-3').css({'width': '990px','padding-right': '0'});
+		$('.slider-wraper-2').css({'width': '990px','padding-right': '0'});
+		$('.simple-banner').css({'width': '990px'});
+		$('.slider-wraper-1').css({'width': '982px','margin-left':'100px'});
+		$('.category-wraper').css({'width': '990px','padding-right': '0'});
 	} else {
 		$sn_wraper.css({'width':'1230px','left':'-15px'});
 		$header_search.css('width','625px');
@@ -112,6 +151,15 @@ function responsiveCheck() {
 		//主导航
 		$('#main-nav-wraper').css({'width': '1230px','padding-right': '30px','height':'36px'});
 		$('#main-nav-cont').css({'width':'1045px','height':'36px'});
+		//banner
+		$('.vip-pannel').css({'display':'block'});
+		$('#vip-pannel-wraper').css({'width': '1230px','margin-right': '-615px'});
+		$('.small-banner').css({'display':'block'});
+		$('.slider-wraper-3').css({'width': '1230px','padding-right': '30px'});
+		$('.simple-banner').css({'width': '1230px'});
+		$('.slider-wraper-2').css({'width': '1230px','padding-right': '30px'});
+		$('.slider-wraper-1').css({'width': '1120px','margin-left':'0'});
+		$('.category-wraper').css({'width': '1230px','padding-right': '30px'});
 	}
 
 	if(body_height < 506) {
