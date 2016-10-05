@@ -78,9 +78,8 @@ body,button,input,select,textarea {
 .header-wraper { width: 990px; left: 0; }
 
 */
-body,html {
+body {
 	min-width: 982px; /*990*/
-	overflow: hidden;
 }
 .contentwraper {
 	width: 1230px;
@@ -500,6 +499,7 @@ body,html {
 	background-color: #dd2727;
 	line-height: 36px;
 	font-family: "Microsoft YaHei";
+	overflow: hidden;
 }
 #main-nav-wraper {
 	width: 1230px;
@@ -1138,7 +1138,8 @@ body,html {
 #content {
 	background-color: #f5f5f5;
 	width: 100%;
-	min-width: 982px;  /*990*/ 
+	min-width: 982px;  /*990*/
+	overflow: hidden; 
 }
 .hotbrand {
 	height: 436px;
