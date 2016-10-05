@@ -165,7 +165,7 @@ function responsiveCheck() {
 		$('.slider-wraper-1').css({'width': '982px','margin-left':'100px'});
 		$('.category-wraper').css({'width': '982px','padding-right': '0'});
 		$('.category-detail-box').css('width','782px');
-		$('.detail-box-left').css('width','512px');
+		$('.detail-box-left').css('width','511px');
 		//通用样式contentwraper
 		$('.contentwraper').css({'width': '982px','padding-right': '0'});
 		// hotbrand
