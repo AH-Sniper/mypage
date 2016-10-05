@@ -5,6 +5,7 @@
 	<title>天猫tmall.com--上天猫，就够了</title>
 	<meta name="author" content="王峰 swjtuwangfeng@126.com">
 	<script src="script/jquery.min.js"></script>
+	<script src="script/tmall/tmall.js"></script>
 	<link rel="stylesheet" href="style/tmall/tmall.css">
 </head>
 <body>
@@ -196,9 +197,9 @@
 					<li class="hot-query-highlight"><a href="#">女包</a></li>
 					<li><a href="#">衬衫男</a></li>
 					<li class="hot-query-highlight"><a href="#">零食</a></li>
-					<li><a href="#">吹风机</a></li>
+				<!-- 	<li><a href="#">吹风机</a></li>
 					<li><a href="#">牛仔裤女</a></li>
-					<li><a href="#">双肩包</a></li>
+					<li><a href="#">双肩包</a></li> -->
 				</ul>
 			</div>
 		</div>
@@ -248,6 +249,20 @@
 			</div>
 		</div>
 		<div id="bgcolor"></div>
+	</div>
+	<!-- 顶部搜索框 -->
+	<div id="top-searchbar">
+		<div class="top-shelter"></div>
+		<div class="top-searchbar-wrap contentwraper">
+			<b></b>
+			<div id="top-search">
+				<form action="//list.tmall.com/search_product.htm" name="topSearch">
+				<input type="text" name="q2" id="mq2" title="请输入搜索文字" value>
+				<label for="mq2">试试在搜索框里随便输点什么吧！</label>
+				<button type="submit">搜索</button>
+				</form>
+			</div>
+		</div>
 	</div>
 	<!-- content部分 -->
 	<div id="content">
@@ -2708,11 +2723,99 @@
 				</a>
 			</div>
 		</div>
+		<!-- 楼层区域 -->
+		<div class="floor-content contentwraper">
+			<div class="floor-cont" id="floor-1">
+				<b></b>
+				<div class="floor-name">亲子时光</div>
+				<div class="floor-sub-name">KIDS & BABY</div>
+				<div class="hot-word-cont">
+					<a href="#" class="hot-word">童装</a>
+					<a href="#" class="hot-word">玩具</a>
+					<a href="#" class="hot-word">待产用品</a>
+					<a href="#" class="hot-word">文教用品</a>
+					<a href="#" class="hot-word">宝宝用品</a>
+					<a href="#" class="hot-word">儿童床品</a>
+					<a href="#" class="hot-word">奶粉</a>
+					<a href="#" class="hot-word">童书</a>
+					<a href="#" class="hot-word">纸尿裤</a>
+				</div>
+				<div class="floor-main-box clearfix">
+					<a href="#" class="big-banner-con">
+						<img src="img/tmall/floor/banner-1.jpg" alt>
+						<div class="act-title">
+							<div class="slide-item" style="top:0;">江博士&gt;</div>
+							<div class="slide-item" style="top:30px;">mikihouse&gt;</div>
+							<div class="slide-item" style="top:60px;">基诺浦&gt;</div>
+						</div>
+						<div class="title-con">
+							<div class="title">学步推荐</div>
+							<div class="sub-title">优质学步鞋</div>
+							<div class="decoration"></div>
+						</div>
+					</a>
+					<div class="middle-column-con clearfix">
+						<a href="#" class="item-box-1">
+							<p class="title">秋冬新品等你抢</p>
+							<p class="sub-title">婴童装每周二上新</p>
+							<img src="img/tmall/floor/1.jpg" alt>
+						</a>
+						<a href="#" class="item-box-1">
+							<p class="title">辣妈出行必备神器</p>
+							<p class="sub-title">与萌宝享受甜蜜拥抱</p>
+							<img src="img/tmall/floor/2.jpg" alt>
+						</a>
+						<a href="#" class="item-box-1">
+							<p class="title">童鞋秋上新</p>
+							<p class="sub-title">机能鞋先行者</p>
+							<img src="img/tmall/floor/3.jpg" alt>
+						</a>
+						<a href="#" class="item-box-1">
+							<p class="title">一周七彩不重样</p>
+							<p class="sub-title">健康孕哺舒适有型</p>
+							<img src="img/tmall/floor/4.jpg" alt>
+						</a>
+						<a href="#" class="item-box-1">
+							<p class="title">立体创意拼插积木</p>
+							<p class="sub-title">幼儿园标配</p>
+							<img src="img/tmall/floor/5.jpg" alt>
+						</a>
+						<a href="#" class="item-box-1">
+							<p class="title">潮酷外套</p>
+							<p class="sub-title">穿着舒适时尚百搭</p>
+							<img src="img/tmall/floor/6.jpg" alt>
+						</a>
+					</div>
+					<div class="right-column-con clearfix">
+						<a href="#" class="item-box-2">
+							<p class="title">国庆放大价</p>
+							<p class="sub-title">满1500减150</p>
+							<img src="img/tmall/floor/b-1.jpg" alt=>
+						</a>
+						<a href="#" class="item-box-2">
+							<p class="title">高景观婴儿推车</p>
+							<p class="sub-title">全球精选皇室御用</p>
+							<img src="img/tmall/floor/b-2.jpg" alt=>
+						</a>
+						<a href="#" class="item-box-2">
+							<p class="title">迎接国庆</p>
+							<p class="sub-title">秋冬新品上新</p>
+							<img src="img/tmall/floor/b-3.jpg" alt=>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="floor-cont" id="floor-2"></div>
+			<div class="floor-cont" id="floor-3"></div>
+			<div class="floor-cont" id="floor-4"></div>
+			<div class="floor-cont" id="floor-5"></div>
+			<div class="floor-cont" id="floor-6"></div>
+		</div>
 	</div>
 		
 	<!--  -->
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	<!-- 脚本文件 -->
-	<script src="script/tmall/tmall.js"></script>
+	
 </body>
 </html>

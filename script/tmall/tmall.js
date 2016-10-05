@@ -15,6 +15,19 @@ $(document).ready(function() {
 	$header_search_input.keydown(function() {
 		$header_search_placeholder.css('display','none');
 	})
+	//顶部搜索框事件
+	$('#top-search input').focus(function() {
+		$('#top-search label').css('color','#ccc');
+	})
+	$('#top-search input').blur(function() {
+		$('#top-search label').css('color','#666');
+		if(!$('#top-search input').val()) {
+			$('#top-search label').css('display','block');
+		}
+	})
+	$('#top-search input').keydown(function() {
+		$('#top-search label').css('display','none');
+	})
 	//窗口响应事件
 	responsiveCheck();
 	//右侧边栏相关动画
@@ -91,6 +104,22 @@ $(document).ready(function() {
 		var i = $('.category-detail-box').index(this);
 		$('.category-list li').eq(i).removeClass('hoverli');
 	});
+	// floor 信息滚动
+	var timer = setInterval(function(){
+			for ( var i = 0; i< 3; i++) {
+				var b = $('.slide-item')[i].offsetTop;
+					b -= 30;
+				if (b<-30) {
+				 	b = 30;
+				 	$('.slide-item').eq(i).css('top',''+b+''+'px');
+				} else { 
+					b = b;
+					$('.slide-item').eq(i).animate({'top':''+b+''+'px'},300);
+				}
+			}
+// $('.slide-item').eq(a).fadeIn()
+// 	.siblings().fadeOut();
+	},3000);
 
 });
 //浏览器窗口大小发生改变时触发事件
@@ -104,6 +133,11 @@ $(window).scroll(function() {
 		$('#bottom').fadeIn();
 	} else {
 		$('#bottom').fadeOut();
+	}
+	if (scroll_top > 780) {
+		$('#top-searchbar').css('top','0');
+	} else {
+		$('#top-searchbar').css('top','-50px');
 	}
 });
 //banner动画函数
@@ -171,6 +205,9 @@ function responsiveCheck() {
 		// hotbrand
 		$('.brandlist').css({'width':'488px'});
 		$('.hotchannel-banner img').css('margin-left','-313.5px');
+		// 顶部搜索框
+		$('#top-search').css('width','600px');
+		$('#top-search input').css('width','503px');
 	} else {
 		$sn_wraper.css({'width':'1230px','left':'-15px'});
 		$header_search.css('width','625px');
@@ -200,6 +237,9 @@ function responsiveCheck() {
 		// hotbrand
 		$('.brandlist').css({'width':'732px'});
 		$('.hotchannel-banner img').css('margin-left','-165px');
+		// 顶部搜索框
+		$('#top-search').css('width','740px');
+		$('#top-search input').css('width','640px');
 	}
 
 	if(body_height < 506) {
