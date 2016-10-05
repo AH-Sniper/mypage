@@ -160,11 +160,16 @@ function responsiveCheck() {
 		$('.small-banner').css({'display':'none'});
 		$('.slider-wraper-3').css({'width': '990px','padding-right': '0'});
 		$('.slider-wraper-2').css({'width': '990px','padding-right': '0'});
-		$('.simple-banner').css({'width': '990px'});
+		$('.simple-banner').css({'width': '990px','padding-right': '0'});
 		$('.slider-wraper-1').css({'width': '982px','margin-left':'100px'});
 		$('.category-wraper').css({'width': '990px','padding-right': '0'});
 		$('.category-detail-box').css('width','782px');
 		$('.detail-box-left').css('width','512px');
+		//通用样式contentwraper
+		$('.contentwraper').css({'width': '982px','padding-right': '0'});
+		// hotbrand
+		$('.brandlist').css({'width':'488px'});
+		$('.hotchannel-banner img').css('margin-left','-313.5px');
 	} else {
 		$sn_wraper.css({'width':'1230px','left':'-15px'});
 		$header_search.css('width','625px');
@@ -182,12 +187,17 @@ function responsiveCheck() {
 		$('#vip-pannel-wraper').css({'width': '1230px','margin-right': '-615px'});
 		$('.small-banner').css({'display':'block'});
 		$('.slider-wraper-3').css({'width': '1230px','padding-right': '30px'});
-		$('.simple-banner').css({'width': '1230px'});
+		$('.simple-banner').css({'width': '1230px','padding-right': '30px'});
 		$('.slider-wraper-2').css({'width': '1230px','padding-right': '30px'});
 		$('.slider-wraper-1').css({'width': '1120px','margin-left':'0'});
 		$('.category-wraper').css({'width': '1230px','padding-right': '30px'});
 		$('.category-detail-box').css('width','852px');
 		$('.detail-box-left').css('width','583px');
+		//通用样式contentwraper
+		$('.contentwraper').css({'width': '1230px','padding-right': '30px'});
+		// hotbrand
+		$('.brandlist').css({'width':'732px'});
+		$('.hotchannel-banner img').css('margin-left','-165px');
 	}
 
 	if(body_height < 506) {

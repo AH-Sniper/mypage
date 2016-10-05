@@ -78,6 +78,13 @@ body,button,input,select,textarea {
 .header-wraper { width: 990px; left: 0; }
 
 */
+.contentwraper {
+	width: 1230px;
+	margin: 0 auto;
+	padding-right: 3px;
+	position: relative;
+	overflow: hidden;
+}
 
 /*@group page structure 页面结构-----------------------------*/
 /*顶部导航*/
@@ -669,7 +676,7 @@ body,button,input,select,textarea {
 	width: 100px;
 	height: 480px;
 	position: absolute;
-	right: 25px;
+	right: 18px;
 	top: 10px;
 	background-color: rgba(0,0,0,.5);
 	z-index: 3;
@@ -763,7 +770,7 @@ body,button,input,select,textarea {
 	position: absolute;
 	z-index: 4;
 	height: 0;
-	width: 1060px;
+	width: 982px;
 	/*background-color: lightgreen;*/
 }
 .category-title {
@@ -790,11 +797,23 @@ body,button,input,select,textarea {
 .category-list {
 	width: 200px;
 	height: 500px;
-	overflow: hidden;
+	margin-right: 0;
+	/*overflow: hidden;*/
 	background-color: rgba(238,238,238,0.95);
+	position: relative;
+}
+.category-list b {
+	display: block;
+	width: 24px;
+	height: 14px;
+	position: absolute;
+	top: 486px;
+	left: 200px;
+	z-index: 0;
+	background: url(../../img/tmall/banner/ad-icon.png) no-repeat 0 0;
 }
 .category-list li{
-	width: 200px;
+	width: 162px;
 	height: 31.2px;
 	line-height: 31.2px;
 	color: #000;
@@ -1110,6 +1129,171 @@ body,button,input,select,textarea {
 	width: 189px;
 	height: 87px;
 	vertical-align: middle;
+}
+/*Banner导航结束，热门品牌开始*/
+#content {
+	background-color: #f5f5f5;
+	width: 100%;
+	min-width: 990px;
+}
+.hotbrand {
+	height: 436px;
+	margin-top: 60px;
+}
+.hotbrand .live-cont {
+	width: 488px;
+	height: 436px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+.live-cont .live-cont-mask {
+	width: 488px;
+	height: 436px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: rgba(255,255,255,.2);
+	opacity: 0;
+	transition: opacity .2s;
+}
+.hotbrand .live-cont:hover .live-cont-mask{ opacity: 1; }
+.hotbrand .brandlist {
+	width: 732px;
+	height: 100%;
+	float: right;
+	overflow: hidden;
+	margin-right: -1px;
+	position: relative;
+}
+.live-cont .live-play-cont {
+	width: 488px;
+	height: 275px;
+	background: #ddd;
+}
+.brandlist li {
+	width: 121px;
+	height: 108px;
+	float: left;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	text-align: center;
+	position: relative;
+	background-color: #fff;
+}
+.brandlist li img {
+	height: 50px;
+	width: 82%;
+	margin-top: 29px;
+}
+.brandlist li .brand-mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 121px;
+	height: 108px;
+	background-color: rgba(0,0,0,.8);
+	opacity: 0;
+	transition: opacity .3s ease-out;
+}
+.brandlist li:hover .brand-mask {
+	opacity: 1;
+}
+.brand-mask b {
+	display: block;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	background: url(../../img/tmall/hotbrand/focus-white.png) no-repeat 0 0;
+}
+.brand-mask b:hover {
+	background: url(../../img/tmall/hotbrand/focus-red.png) no-repeat 0 0;
+}
+.brand-mask span {
+	color: #fff;
+	font-family: "Microsoft YaHei";
+	height: 80px;
+	line-height: 80px;
+}
+.brand-mask a {
+	display: block;
+	font-family: "Microsoft YaHei";
+	width: 63px;
+	font-size: 12px;
+	height: 18px;
+	line-height: 18px;
+	background-color: #ff0000;
+	color: #fff;
+	border-radius: 9px;
+	position: absolute;
+	left: 29px;
+	top: 60px;
+}
+.brand-mask a:hover {  background-color: #cf000f; color: #ccc;}
+.brandrefresh a {
+	display: block;
+	width: 121px;
+	height: 108px;
+	position: absolute;
+	right: 1px;
+	bottom: 1px;
+	background-color: #fff;
+	transition: all .3s;
+}
+.brandrefresh a:hover b { 
+	background: url(../../img/tmall/hotbrand/refresh-white.png) 0 0 no-repeat; 
+	transform: rotate(360deg);
+}
+.brandrefresh a:hover { background-color: #dd2727; }
+.brandrefresh a:hover p {
+	color: #fff;
+}
+.brandrefresh a b {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: 28px auto 0;
+	background: url(../../img/tmall/hotbrand/refresh-grey.png) 0 0 no-repeat;
+	transition: transform .6s;
+}
+.brandrefresh a p {
+	text-align: center;
+	color: #bbb;
+	font-size: 14px;
+	font-family: "Microsoft YaHei";
+	font-weight: 300;
+	margin-top: -6px;
+}
+/*hotbrand 结束 ,hotchannel 开始*/
+.hotchannel {
+	margin: 30px auto 0;
+	height: 577px;
+}
+.hotchannel-body {
+	width: 1240px;
+	margin-right: -10px;
+}
+.hotchannel .channel-column {
+	width: 238px;
+	height: 476px;
+	margin-right: 10px;
+	text-align: center;
+	float: left;
+	border-bottom: 1px solid transparent;
+	background-color: yellow;
+}
+.hotchannel-banner {
+	margin-top: 10px;
+	height: 90px;
+	overflow: hidden;
+	background-color: lightblue;
+}
+.hotchannel-banner img {
+	margin-left: -165px;
 }
 /*@group page components 页面组件-----------------------------*/
 /*右侧边栏*/
