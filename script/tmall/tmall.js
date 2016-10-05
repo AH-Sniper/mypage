@@ -140,7 +140,8 @@ function responsiveCheck() {
 		$sn_wraper.css({'width':'982px','left':'0'});
 		$header_search.css('width','410px');
 		$header_search_input.css('width','276px');
-		$header_wraper.css({'width':'990px','left':'0'});
+		$header_wraper.css({'width':'982px','left':'0'});
+		$('#sitemap').css('width','982px');
 		//右侧边栏
 		$bgcolor.css('left','35px');
 		$('.not-see').css('left','35px');
@@ -156,13 +157,13 @@ function responsiveCheck() {
 		$('#main-nav-cont').css({'width':'760px','height':'72px'});
 		//banner
 		$('.vip-pannel').css({'display':'none'});
-		$('#vip-pannel-wraper').css({'width': '990px','margin-right': '-495px'});
+		$('#vip-pannel-wraper').css({'width': '982px','margin-right': '-495px'});
 		$('.small-banner').css({'display':'none'});
-		$('.slider-wraper-3').css({'width': '990px','padding-right': '0'});
-		$('.slider-wraper-2').css({'width': '990px','padding-right': '0'});
-		$('.simple-banner').css({'width': '990px','padding-right': '0'});
+		$('.slider-wraper-3').css({'width': '982px','padding-right': '0'});
+		$('.slider-wraper-2').css({'width': '982px','padding-right': '0'});
+		$('.simple-banner').css({'width': '982px','padding-right': '0'});
 		$('.slider-wraper-1').css({'width': '982px','margin-left':'100px'});
-		$('.category-wraper').css({'width': '990px','padding-right': '0'});
+		$('.category-wraper').css({'width': '982px','padding-right': '0'});
 		$('.category-detail-box').css('width','782px');
 		$('.detail-box-left').css('width','512px');
 		//通用样式contentwraper
@@ -175,6 +176,7 @@ function responsiveCheck() {
 		$header_search.css('width','625px');
 		$header_search_input.css('width','491px');
 		$header_wraper.css({'width':'1230px','left':'-15px'});
+		$('#sitemap').css('width','1198px');
 		//右侧边栏
 		$bgcolor.css('left',0);
 		$sidebar.unbind('mouseenter').unbind('mouseleave');

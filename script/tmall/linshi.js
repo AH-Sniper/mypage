@@ -35,7 +35,12 @@ $(document).ready(function() {
 	});
 	//返回顶部按钮
 	$('#bottom').click(function() {
-		$('body').animate({scrollTop:0}, 280);
+		if($('body')){
+			$('body').animate({scrollTop:0}, 280);
+		}
+		if ($('html')) {
+			$('html').animate({scrollTop:0}, 280);
+		}
 	});
 	//主导航hover
 	$('#main-nav-cont a').each(function(index){
@@ -53,6 +58,7 @@ $(document).ready(function() {
 	//鼠标移到 slider-nav 切换到相应的banner图
 	$('.slider-nav li').mouseover(function() {
 		i = $('.slider-nav li').index(this);
+		clearInterval(btimer);
 		showBanner(i);
 	});
 
@@ -67,6 +73,24 @@ $(document).ready(function() {
 			if (i > 5) { i = 0;};
 		},3000);
 	}).trigger('mouseout'); //鼠标移入banner区域，动画暂停,默认触发 mouseleave 即动画自动播放
+	//分类列表
+	$('.category-list li').hover(function(){
+		var i = $('.category-list li').index(this);
+		$('.category-detail-box').eq(i).show()
+			.siblings().hide();
+	},function(){
+		var i = $('.category-list li').index(this);
+		$('.category-detail-box').eq(i).hide();
+	});
+	$('.category-detail-box').hover(function(){
+		$(this).show();
+		var i = $('.category-detail-box').index(this);
+		$('.category-list li').eq(i).addClass('hoverli');
+	},function(){
+		$(this).hide();
+		var i = $('.category-detail-box').index(this);
+		$('.category-list li').eq(i).removeClass('hoverli');
+	});
 
 });
 //浏览器窗口大小发生改变时触发事件
@@ -86,8 +110,8 @@ $(window).scroll(function() {
 function showBanner(index) {
 	//显示图片
 	$('.slider-pannel').eq(index).css({'display':'block','z-index':'1'})
-		.stop(true,true).animate({'opacity':'1'},800)
-		.siblings().stop(true,true).animate({'opacity':'0'},800,function() {$(this).css({'display':'none','z-index':'0'})});
+		.stop(true,false).animate({'opacity':'1'},800)
+		.siblings().stop(true,false).animate({'opacity':'0'},800,function() {$(this).css({'display':'none','z-index':'0'})});
 	//slider-nav 改变样式
 	$('.slider-nav li').eq(index).addClass('selected')
 		.siblings().removeClass('selected');
@@ -117,6 +141,7 @@ function responsiveCheck() {
 		$header_search.css('width','410px');
 		$header_search_input.css('width','276px');
 		$header_wraper.css({'width':'990px','left':'0'});
+		$('#sitemap').css('width','982px');
 		//右侧边栏
 		$bgcolor.css('left','35px');
 		$('.not-see').css('left','35px');
@@ -136,14 +161,22 @@ function responsiveCheck() {
 		$('.small-banner').css({'display':'none'});
 		$('.slider-wraper-3').css({'width': '990px','padding-right': '0'});
 		$('.slider-wraper-2').css({'width': '990px','padding-right': '0'});
-		$('.simple-banner').css({'width': '990px'});
+		$('.simple-banner').css({'width': '990px','padding-right': '0'});
 		$('.slider-wraper-1').css({'width': '982px','margin-left':'100px'});
 		$('.category-wraper').css({'width': '990px','padding-right': '0'});
+		$('.category-detail-box').css('width','782px');
+		$('.detail-box-left').css('width','512px');
+		//通用样式contentwraper
+		$('.contentwraper').css({'width': '982px','padding-right': '0'});
+		// hotbrand
+		$('.brandlist').css({'width':'488px'});
+		$('.hotchannel-banner img').css('margin-left','-313.5px');
 	} else {
 		$sn_wraper.css({'width':'1230px','left':'-15px'});
 		$header_search.css('width','625px');
 		$header_search_input.css('width','491px');
 		$header_wraper.css({'width':'1230px','left':'-15px'});
+		$('#sitemap').css('width','1198px');
 		//右侧边栏
 		$bgcolor.css('left',0);
 		$sidebar.unbind('mouseenter').unbind('mouseleave');
@@ -156,10 +189,17 @@ function responsiveCheck() {
 		$('#vip-pannel-wraper').css({'width': '1230px','margin-right': '-615px'});
 		$('.small-banner').css({'display':'block'});
 		$('.slider-wraper-3').css({'width': '1230px','padding-right': '30px'});
-		$('.simple-banner').css({'width': '1230px'});
+		$('.simple-banner').css({'width': '1230px','padding-right': '30px'});
 		$('.slider-wraper-2').css({'width': '1230px','padding-right': '30px'});
 		$('.slider-wraper-1').css({'width': '1120px','margin-left':'0'});
 		$('.category-wraper').css({'width': '1230px','padding-right': '30px'});
+		$('.category-detail-box').css('width','852px');
+		$('.detail-box-left').css('width','583px');
+		//通用样式contentwraper
+		$('.contentwraper').css({'width': '1230px','padding-right': '30px'});
+		// hotbrand
+		$('.brandlist').css({'width':'732px'});
+		$('.hotchannel-banner img').css('margin-left','-165px');
 	}
 
 	if(body_height < 506) {
