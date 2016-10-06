@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var $header_search_input = $('#mq'),
 		$header_search_placeholder = $('.combobox-placeholder');
-
+	
 	//搜索框事件
 	$header_search_input.focus(function() {
 		$header_search_placeholder.css('color','#ccc');
@@ -14,6 +14,19 @@ $(document).ready(function() {
 	})
 	$header_search_input.keydown(function() {
 		$header_search_placeholder.css('display','none');
+	})
+	//顶部搜索框事件
+	$('#top-search input').focus(function() {
+		$('#top-search label').css('color','#ccc');
+	})
+	$('#top-search input').blur(function() {
+		$('#top-search label').css('color','#666');
+		if(!$('#top-search input').val()) {
+			$('#top-search label').css('display','block');
+		}
+	})
+	$('#top-search input').keydown(function() {
+		$('#top-search label').css('display','none');
 	})
 	//窗口响应事件
 	responsiveCheck();
@@ -42,6 +55,29 @@ $(document).ready(function() {
 			$('html').animate({scrollTop:0}, 280);
 		}
 	});
+	//左侧边栏返回顶部
+	$('.left-sidebar-return').click(function() {
+		if($('body')){
+			$('body').animate({scrollTop:0}, 280);
+		}
+		if ($('html')) {
+			$('html').animate({scrollTop:0}, 280);
+		}
+	});
+	//左侧边栏点击，页面滚动到相应位置
+	$('.left-side-nav').click(function() {
+		var i = $('.left-side-nav').index(this);
+		var y = $('.floor-cont').eq(i).offset().top - 60;
+		// alert(y);
+		if($('body')){
+			$('body').animate({scrollTop:''+y+''}, 360);
+		}
+		if ($('html')) {
+			$('html').animate({scrollTop:''+y+''}, 360);
+		}
+		return false;
+	});
+
 	//主导航hover
 	$('#main-nav-cont a').each(function(index){
 		$(this).hover(function() {
@@ -91,6 +127,28 @@ $(document).ready(function() {
 		var i = $('.category-detail-box').index(this);
 		$('.category-list li').eq(i).removeClass('hoverli');
 	});
+	// floor 信息滚动
+	var timer = setInterval(function(){
+			smallLoop(0,2);
+			smallLoop(3,5);
+			smallLoop(6,8);
+			smallLoop(9,11);
+			smallLoop(12,14);
+			smallLoop(15,17);
+	},3000);
+	function smallLoop(start,end) {             // 第1到第3进入一个循环，第4到第6进入一个循环…
+		for ( var i = start; i< (end+1); i++) {
+			var b = $('.slide-item')[i].offsetTop;
+				b -= 30;
+			if (b<-30) {
+			 	b = 30;
+			 	$('.slide-item').eq(i).css('top',''+b+''+'px');
+			} else { 
+				b = b;
+				$('.slide-item').eq(i).animate({'top':''+b+''+'px'},300);
+			}
+		}
+	}
 
 });
 //浏览器窗口大小发生改变时触发事件
@@ -104,6 +162,26 @@ $(window).scroll(function() {
 		$('#bottom').fadeIn();
 	} else {
 		$('#bottom').fadeOut();
+	}
+	if (scroll_top > 700) {
+		$('#top-searchbar').css('top','0');
+	} else {
+		$('#top-searchbar').css('top','-50px');
+	}
+	//页面滚动到相应位置时，左侧边栏添加相应样式
+	for (var i = 0; i < 6;i++) {
+		if ( scroll_top >= ($('.floor-cont').eq(i).offset().top - 60)) {
+			$('.left-side-nav').removeClass('current-area');
+			$('.left-side-nav').eq(i).addClass('current-area');
+		} else if (scroll_top < ($('.floor-cont').eq(0).offset().top - 60)) {
+			$('.left-side-nav').removeClass('current-area');
+		}
+	}
+	//平时左侧边栏隐藏，当滚动条滚动超过700 时出现
+	if (scroll_top > 700) {
+		$('#left-sidebar').css({'height':'335px','width':'36px'});
+	} else {
+		$('#left-sidebar').css({'height':'0','width':'0'});
 	}
 });
 //banner动画函数
@@ -140,7 +218,7 @@ function responsiveCheck() {
 		$sn_wraper.css({'width':'982px','left':'0'});
 		$header_search.css('width','410px');
 		$header_search_input.css('width','276px');
-		$header_wraper.css({'width':'990px','left':'0'});
+		$header_wraper.css({'width':'982px','left':'0'});
 		$('#sitemap').css('width','982px');
 		//右侧边栏
 		$bgcolor.css('left','35px');
@@ -157,20 +235,28 @@ function responsiveCheck() {
 		$('#main-nav-cont').css({'width':'760px','height':'72px'});
 		//banner
 		$('.vip-pannel').css({'display':'none'});
-		$('#vip-pannel-wraper').css({'width': '990px','margin-right': '-495px'});
+		$('#vip-pannel-wraper').css({'width': '982px','margin-right': '-495px'});
 		$('.small-banner').css({'display':'none'});
-		$('.slider-wraper-3').css({'width': '990px','padding-right': '0'});
-		$('.slider-wraper-2').css({'width': '990px','padding-right': '0'});
-		$('.simple-banner').css({'width': '990px','padding-right': '0'});
+		$('.slider-wraper-3').css({'width': '982px','padding-right': '0'});
+		$('.slider-wraper-2').css({'width': '982px','padding-right': '0'});
+		$('.simple-banner').css({'width': '982px','padding-right': '0'});
 		$('.slider-wraper-1').css({'width': '982px','margin-left':'100px'});
-		$('.category-wraper').css({'width': '990px','padding-right': '0'});
+		$('.category-wraper').css({'width': '982px','padding-right': '0'});
 		$('.category-detail-box').css('width','782px');
-		$('.detail-box-left').css('width','512px');
+		$('.detail-box-left').css('width','511px');
 		//通用样式contentwraper
 		$('.contentwraper').css({'width': '982px','padding-right': '0'});
 		// hotbrand
 		$('.brandlist').css({'width':'488px'});
 		$('.hotchannel-banner img').css('margin-left','-313.5px');
+		// 顶部搜索框
+		$('#top-search').css('width','600px');
+		$('#top-search input').css('width','503px');
+		//footer
+		$('#tmall-desc').css({'width': '982px','padding-right': '0'});
+		$('#tmall-desc dl').css({'padding-left':'15px','width':'200px'});
+		$('#desc-5').css({'padding-left':'0','width':'110px'});
+		$('.copyright-cont').css('width','982px');
 	} else {
 		$sn_wraper.css({'width':'1230px','left':'-15px'});
 		$header_search.css('width','625px');
@@ -200,6 +286,14 @@ function responsiveCheck() {
 		// hotbrand
 		$('.brandlist').css({'width':'732px'});
 		$('.hotchannel-banner img').css('margin-left','-165px');
+		// 顶部搜索框
+		$('#top-search').css('width','740px');
+		$('#top-search input').css('width','640px');
+		//footer
+		$('#tmall-desc').css({'width': '1190px','padding-right': '30px'});
+		$('#tmall-desc dl').css({'padding-left':'52px','width':'186px'});
+		$('#desc-5').css({'padding-left':'52px','width':'186px'});
+		$('.copyright-cont').css('width','1190px');
 	}
 
 	if(body_height < 506) {
