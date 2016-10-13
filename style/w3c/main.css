@@ -269,7 +269,10 @@ header .topText {
     width: 49.99999%;
     padding: 4%;
     text-align: center;
-    float: left;
+/*    float: left;*/
+}
+.light-grey #floatRight {
+    float: right !important;
 }
 .w3-col-c h1 {
     font-size: 80px;
@@ -368,7 +371,7 @@ header .topText {
 }
 .card {
     padding: 15px 10px;
-    height: 260px;
+    height: 280px;
     color: #000;
     background-color: #fff;
 }
