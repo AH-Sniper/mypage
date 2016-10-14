@@ -499,6 +499,9 @@ footer p:first-of-type {
     .topNavLinks {
         display: block;
     }
+    #sideMenu {
+        display: block; !important;
+    }
 }
 @media screen and (max-width:600px) {
     header {

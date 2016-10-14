@@ -37,8 +37,8 @@ $(function () {
         var a = $('#sideMenu');
         var b = $('#main');
         var c =$('#nav_menu-xs');
-        var w = $(window).width();
-        if (w < 768) {
+        var w = $(window).width()+17;  // 滚动条宽度
+        if (w <= 768) {
             if (c.css('display') == 'block') {
                 c.slideUp();
             } else {
