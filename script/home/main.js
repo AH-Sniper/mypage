@@ -5,20 +5,9 @@ $(function(){
     // 首页 slide
     // 0组动画初始化
     slideIn(0);
-    var i = 0,
-        stimer = null;
+    var i = 0;
+     var stimer = null;
 
-    $('.slideNav').each(function(index){
-        $(this).click(function(){
-            if(stimer) {
-                clearInterval(stimer);
-            }
-            slideOut(i);
-            slideIn(index);
-            i = index;
-            $('.slideContainer').trigger('mouseout');
-        });
-    });
 
     $('.slideContainer').hover(function(){
         if(stimer) {
@@ -36,6 +25,18 @@ $(function(){
             if (i > 3) { i = 0 }
         },6000);
     }).trigger('mouseout');
+
+    $('.slideNav').each(function(index){
+        $(this).click(function(){
+            if(stimer) {
+                clearInterval(stimer);
+            }
+            slideOut(i);
+            slideIn(index);
+            i = index;
+            $('.slideContainer').trigger('mouseout');
+        });
+    });
 
     // pageDown 按钮点击事件
     $('#pageDown').click(function(){
@@ -109,8 +110,8 @@ $(function(){
     // skillgallery 动画
     var g_n_index = 1;   // gallery-nav-index
     // 初始化
-    for( var i=0;i<4;i++) {
-        $('.gallery').eq(i).addClass('fadeInUp');
+    for( var x=0;x<4;x++) {
+        $('.gallery').eq(x).addClass('fadeInUp');
     }
     $('.gallery-nav b').each(function (index) {
        $(this).click(function () {

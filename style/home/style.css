@@ -1264,9 +1264,20 @@ nav {
   height: 100px;
   text-align: center;
 }
+#cont-3 .container .thanks div:hover img {
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
 #cont-3 .container .thanks div img {
   display: block;
   margin: 10px auto;
+   -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 #cont-3 .container p {
   margin: 0 0 0 0;
