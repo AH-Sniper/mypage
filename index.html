@@ -1,18 +1,303 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="cn-ZH">
 <head>
-	<meta charset="UTF-8">
-	<title>mypage</title>
-	<link rel="stylesheet" href="style/home/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico">
+    <title>王峰的主页</title>
+    <link rel="stylesheet" href="style/home/bootstrap.css">
+    <link rel="stylesheet" href="style/home/font-awesome.css">
+    <link rel="stylesheet" href="style/home/animate.css">
+    <link rel="stylesheet" href="style/home/style.css">
+    <!--[if lt IE 9]>
+    <script src="script/html5shiv.js"></script>
+    <script src="script/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<div style="margin:0 auto;width: 300px;">
-		<h2>我的demo</h2>
-		<ul>
-			<li><a href="tmall.html">Tmall</a></li>
-			<li><a href="w3cschools.html">W3C</a></li>
-			<li><a href="#">other</a></li>
-		</ul>
-	</div>
+    <div class="wrap">
+        <nav class="navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#"><i class="icon-github"></i></a>
+                </div>
+                <div id="myNav" class="clearfix">
+                    <ul class="pull-right nav navbar-nav">
+                        <li class="active"><a href="#">首页</a></li>
+                        <li><a href="#">我的技能</a></li>
+                        <li><a href="#">我的Demo</a></li>
+                        <li><a href="#">最后</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="transSection" id="transSection-1">
+            <div class="cover">
+                <div class="container">
+                    <div class="slideContainer">
+                        <div class="slide" id="slide-1">
+                            <h1 class="animated"><i class="icon-quote-left"></i> 就像这样一步一步向前迈进</h1>
+                            <p class="animated">一只自学Web前端的菜鸟 <b><i class="icon-twitter"></i></b></p>
+                            <b class="imgAndName animated"><img src="img/home/me.png" alt="王峰"><i id="backName">王峰</i></b>
+                        </div>
+                        <div class="slide" id="slide-2">
+                            <p class="picDesc animated">经历过迷茫、浮躁、颓废，走过不少弯路</p>
+                            <img src="img/home/slide/slide-2-1.png" alt id="slide-2-1" class="slideImg animated">
+                            <img src="img/home/slide/slide-2-2.png" alt id="slide-2-2" class="slideImg animated">
+                            <img src="img/home/slide/slide-2-3.png" alt id="slide-2-3" class="slideImg animated">
+                            <img src="img/home/slide/slide-2-4.png" alt id="slide-2-4" class="slideImg animated">
+                        </div>
+                        <div class="slide" id="slide-3">
+                            <p class="picDesc animated">决定学好一门技术，需要一点兴趣作为导师</p>
+                            <img src="img/home/slide/slide-3-1.png" alt id="slide-3-1" class="slideImg animated">
+                            <img src="img/home/slide/slide-3-2.png" alt id="slide-3-2" class="slideImg animated">
+                            <img src="img/home/slide/slide-3-3.png" alt id="slide-3-3" class="slideImg animated">
+                        </div>
+                        <div class="slide" id="slide-4">
+                            <p class="picDesc animated">现在的我，希望找一个Web 前端相关的工作</p>
+                            <img src="img/home/slide/slide-4-1.png" alt id="slide-4-1" class="slideImg animated">
+                            <img src="img/home/slide/slide-4-2.png" alt id="slide-4-2" class="slideImg animated">
+                            <img src="img/home/slide/slide-4-3.png" alt id="slide-4-3" class="slideImg animated">
+                            <img src="img/home/slide/slide-4-4.png" alt id="slide-4-4" class="slideImg animated">
+                            <img src="img/home/slide/slide-4-5.png" alt id="slide-4-5" class="slideImg animated">
+                            <img src="img/home/slide/slide-4-6.png" alt id="slide-4-6" class="slideImg animated">
+                        </div>
+                    </div>
+                    <div class="slideNavWrap">
+                        <i class="slideNav currentSlide"></i>
+                        <i class="slideNav"></i>
+                        <i class="slideNav"></i>
+                        <i class="slideNav"></i>
+                    </div>
+                    <a href="#" id="pageDown"><i class="icon-angle-down"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <div class="content" id="cont-1">
+            <div class="container">
+                <h2 class="animated">三门基本功</h2>
+                <div class="devider">
+                    <div class="devider1"></div>
+                    <div class="devider2"></div>
+                </div>
+                <div class="basicSkill clearfix">
+                    <div class="animatedBox animated">
+                        <div class="skillBox" id="skillBox-1">
+                            <div class="circle">
+                                <div class="pie-left">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="pie-right">
+                                    <div class="right-circle"></div>
+                                </div>
+                                <div class="mask-circle"></div>
+                                <img src="img/home/html5.png" alt="html5" class="animated">
+                                <div class="text-desc">Html 5</div>
+                                <div class="skillPercent animated">85%</div>
+                            </div>
+                            <div class="skillDesc">
+                                <ul>
+                                    <li><i class="icon-ok"></i> 熟悉 html5 ，遵循 W3C 标准</li>
+                                    <li><i class="icon-ok"></i> 能够书写语意合理，结构清晰，易维护的 html 结构</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="animatedBox animated">
+                        <div class="skillBox" id="skillBox-2">
+                            <div class="circle">
+                                <div class="pie-left">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="pie-right">
+                                    <div class="right-circle"></div>
+                                </div>
+                                <div class="mask-circle"></div>
+                                <img src="img/home/css3.png" alt="css3" class="animated">
+                                <div class="text-desc">CSS 3</div>
+                                <div class="skillPercent animated">75%</div>
+                            </div>
+                            <div class="skillDesc">
+                                <ul>
+                                    <li><i class="icon-ok"></i> 熟悉 CSS3</li>
+                                    <li><i class="icon-ok"></i> 能够还原视觉设计，并兼容业界主流的浏览器</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="animatedBox animated">
+                        <div class="skillBox" id="skillBox-3">
+                            <div class="circle">
+                                <div class="pie-left">
+                                    <div class="left-circle"></div>
+                                </div>
+                                <div class="pie-right">
+                                    <div class="right-circle"></div>
+                                </div>
+                                <div class="mask-circle"></div>
+                                <img src="img/home/js.png" alt="javascript" class="animated">
+                                <div class="text-desc">JavaScript</div>
+                                <div class="skillPercent animated">65%</div>
+                            </div>
+                            <div class="skillDesc">
+                                <ul>
+                                    <li><i class="icon-ok"></i> 熟悉 JavaScript，掌握基本语法</li>
+                                    <li><i class="icon-ok"></i> 熟悉 jQuery 框架</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <section class="transSection" id="transSection-2">
+            <div class="cover">
+                <div class="container">
+                    <h2 class="animated">综合知识&技能</h2>
+                    <div class="devider">
+                        <div class="devider1"></div>
+                        <div class="devider2"></div>
+                    </div>
+                    <div class="skillGallery clearfix">
+                        <div class="gallery animated" id="gallery-1">
+                            <div class="gallery-img"></div>
+                            <div class="gallery-desc">熟练使用 Firebug 等浏览器调试工具，了解 Fiddler http 调试代理工具</div>
+                        </div>
+                        <div class="gallery animated" id="gallery-2">
+                            <div class="gallery-img"></div>
+                            <div class="gallery-desc">熟练使用 PS 进行切图等 web 相关图片处理操作</div>
+                        </div>
+                        <div class="gallery animated" id="gallery-3">
+                            <div class="gallery-img"></div>
+                            <div class="gallery-desc">熟悉 Bootstrap 开发框架，了解栅格系统原理，以及相关组件的使用</div>
+                        </div>
+                        <div class="gallery animated" id="gallery-4">
+                            <div class="gallery-img"></div>
+                            <div class="gallery-desc">熟悉 Less 动态样式语言的使用，掌握基本的变量、嵌套规则的使用</div>
+                        </div>
+                        <div class="gallery animated" id="gallery-5">
+                            <div class="gallery-img"></div>
+                            <div class="gallery-desc">了解 GitHub 作为版本控制管理工具的使用</div>
+                        </div>
+                        <div class="gallery animated" id="gallery-6">
+                            <div class="gallery-img"></div>
+                            <div class="gallery-desc">熟悉 WebStorm 等主流编辑器工具的使用</div>
+                        </div>
+                        <div class="gallery animated" id="gallery-7">
+                            <div class="gallery-img"></div>
+                            <div class="gallery-desc">了解 Gulp 基于流的自动化构建工具的使用</div>
+                        </div>
+                        <div class="gallery animated" id="gallery-8">
+                            <div class="gallery-img"></div>
+                            <div class="gallery-desc">了解 PHP 和 SQL 的基本知识</div>
+                        </div>
+
+                        <div class="gallery-nav">
+                            <b class="current-gallery"></b><b></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="content" id="cont-2">
+            <div class="container">
+                <div class="rwd">
+                    <img src="img/home/big.png" alt class="animated" id="rwd-1">
+                    <img src="img/home/m1.png" alt class="animated" id="rwd-2">
+                    <img src="img/home/m2.png" alt class="animated" id="rwd-3">
+                    <img src="img/home/small.png" alt class="animated" id="rwd-4">
+                    <div class="rwd-desc">
+                        <h2 class="animated">响应式设计和移动Web</h2>
+                        <p class="animated">熟悉响应式设计（Responsive Web Design）原理</p>
+                        <p class="animated">了解移动Web开发流程</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <section class="transSection" id="transSection-3">
+                <div class="cover">
+                    <div class="container">
+                        <h2 class="animated">我的Demo</h2>
+                        <div class="devider">
+                            <div class="devider1"></div>
+                            <div class="devider2"></div>
+                        </div>
+                        <div class="demo-gallery clearfix">
+                            <div class="demo" id="demo-1">
+                                <img src="img/home/tmall.jpg" alt="tmall">
+                                <div class="demo-cover">
+                                    <p><i class="icon-zoom-in"></i> 点击详情</p>
+                                </div>
+                            </div>
+                            <div class="demo" id="demo-2">
+                                <img src="img/home/w3c.jpg" alt="tmall">
+                                <div class="demo-cover">
+                                    <p><i class="icon-zoom-in"></i> 点击详情</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="content" id="cont-3">
+                <div class="container">
+                    <p class="colored">感&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;谢：</p>
+                    <div class="thanks clearfix">
+                        <div><a href="http://www.imooc.com/" target="_blank"><img src="img/home/imooc.png" alt="慕课网"></a>慕课网</div>
+                        <div><a href="http://www.jetbrains.com/webstorm/" target="_blank"><img src="img/home/webstorm2.png" alt="WebStorm"></a>WebStorm</div>
+                        <div><a href="https://github.com/" target="_blank"><img src="img/home/github2.png" alt="GitHub"></a>GitHub</div>
+                    </div>
+                    <p class="colored">联系方式：</p>
+                    <div class="contact">swjtuwangfeng@126.com&nbsp;&nbsp;<a href="https://github.com/AH-Sniper" target="_blank"><i class="icon-github"></i></a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="backToTop"><i class="icon-arrow-up"></i></div>
+    </div>
+
+
+    <!--模态框-->
+    <div class="modal fade" id="tmallModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="demo-big">
+                    <img src="img/home/tmall-big.jpg" alt="tmall">
+                    <p>天猫首页</p>
+                    <i class="icon-remove" data-dismiss="modal"></i>
+                    <a href="tmall.html" target="_blank"><b class="icon-hand-right"></b> 去看看</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="modal fade" id="w3cModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="demo-big">
+                    <img src="img/home/w3c-big.jpg" alt="w3c">
+                    <p>W3CSchools  响应式页面布局</p>
+                    <i class="icon-remove" data-dismiss="modal"></i>
+                    <a href="w3cschools.html" target="_blank"><b class="icon-hand-right"></b> 去看看</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--脚本文件-->
+    <script src="script/jquery.min.js"></script>
+    <script src="script/home/bootstrap.js"></script>
+    <script src="script/home/main.js"></script>
 </body>
 </html>
