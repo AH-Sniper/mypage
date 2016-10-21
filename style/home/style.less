@@ -1329,15 +1329,30 @@ html,body,nav {
         width: 220px;
         height: 100px;
         text-align: center;
+        &:hover img {
+          -webkit-transform: translateY(-8px);
+          -moz-transform: translateY(-8px);
+          -ms-transform: translateY(-8px);
+          -o-transform: translateY(-8px);
+          transform: translateY(-8px);
+        }
         img {
           display: block;
           margin: 10px auto;
+          -webkit-transition: all .3s;
+          -moz-transition: all .3s;
+          -o-transition: all .3s;
+          transition: all .3s;
         }
       }
     }
     p {
       margin: 0 0 0 0;
       padding-left: 120px;
+    }
+    .littlechange {
+      position: relative;
+      top: 40px;
     }
     .colored {
       color: #19B5E7;

@@ -1274,7 +1274,7 @@ nav {
 #cont-3 .container .thanks div img {
   display: block;
   margin: 10px auto;
-   -webkit-transition: all .3s;
+  -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
@@ -1282,6 +1282,10 @@ nav {
 #cont-3 .container p {
   margin: 0 0 0 0;
   padding-left: 120px;
+}
+#cont-3 .container .littlechange {
+  position: relative;
+  top: 40px;
 }
 #cont-3 .container .colored {
   color: #19B5E7;
