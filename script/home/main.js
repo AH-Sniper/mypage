@@ -208,6 +208,16 @@ $(function(){
            $('.navbar').css({'padding':'20px','background-color':'transparent'});
            $('.navbar-header a i').css({'font-size':'68px','color':'#19B5E7'});
        }
+       // 滚动到相应位置，导航标签切换
+        if (scrollHeight < 616) {
+            $('#myNav li').eq(0).addClass('active').siblings().removeClass('active');
+        }
+        if (scrollHeight >= 616 && scrollHeight < 2319) {
+            $('#myNav li').eq(1).addClass('active').siblings().removeClass('active');
+        }
+        if ( scrollHeight >= 2319 ) {
+            $('#myNav li').eq(2).addClass('active').siblings().removeClass('active');
+        }
        // 向下翻页按钮
        if ( scrollHeight > 615) {
            $('#pageDown').hide(300);
